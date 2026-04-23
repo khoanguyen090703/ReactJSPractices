@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'
 
 function App() {
   const [state, setState] = useState({
@@ -11,7 +12,7 @@ function App() {
   return (
     <div className='App'>
       <Navbar />
-      <Home bootcampName={state.bootcamp} />
+      <Outlet/>
     </div>
   )
 }

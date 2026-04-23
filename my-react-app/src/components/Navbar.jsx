@@ -1,5 +1,6 @@
 import './Navbar.css'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
     const [state, setState] = useState({
@@ -10,9 +11,9 @@ export default function Navbar() {
         <div>
             <nav id='navbar'>
                 <ul>
-                    <a href="#"><li>Home</li></a>
-                    <a href="#"><li>Contact</li></a>
-                    <a href="#"><li>About</li></a>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/contact">Contact</Link></li>
+                    <li><Link to="/about">About</Link></li>
                 </ul>
 
                 <div className="nav-details">
